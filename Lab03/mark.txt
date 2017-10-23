@@ -1,0 +1,12 @@
+
+mark: 3
+
+notes:
+-in swap.py, no need to set z = '' outside body of if statement
+-in hangman.py, the main issue seems to be that the if statements are outside
+ the body of the while loop, so things weren't getting added to guessed.
+ i've updated the code with appropriate indentation so there is something 
+ working now. i'd prefer to see the commenting in line with the code,
+ especially because the code is really similar to one i found on the internet 
+ (http://www.canyoucompute.co.uk/uploads/1/4/2/4/14249012/05_hangman.pdf). for
+ now i'm just taking off a mark but please don't do this in the future

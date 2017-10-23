@@ -1,7 +1,7 @@
 #Task 8
 
 secret_phrase = open('secret_phrase.txt', 'r')
-shown_phrase = secret_phrase.read()
+shown_phrase = secret_phrase.read()[:-1]
 
 guessed = []
 wrong = []
@@ -26,16 +26,16 @@ while tries > 0:
 
     guess = raw_input()
 
-if guess in guessed or guess in wrong:
-    print "Already guessed", guess
-elif guess in shown_phrase:
-    print "Yay"
-    guessed.append(guess)
-else:
-    print "Nope"
-    tries = tries - 1
-    wrong.append(guess)
-    print ()
+    if guess in guessed or guess in wrong:
+        print "Already guessed", guess
+    elif guess in shown_phrase:
+        print "Yay"
+        guessed.append(guess)
+    else:
+        print "Nope"
+        tries = tries - 1
+        wrong.append(guess)
+        #print ()
 
 if tries:
     print "You guessed", shown_phrase
