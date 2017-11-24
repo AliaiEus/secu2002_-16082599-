@@ -1,0 +1,7 @@
+
+mark: 4
+
+notes:
+-don't see the church_theft.py file? 
+-better to use filter instead of map for analyze_shapeshift.py, then you can 
+ just get the count as the length of the returned list
